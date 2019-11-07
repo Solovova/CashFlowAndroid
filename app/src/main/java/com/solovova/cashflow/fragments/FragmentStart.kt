@@ -18,7 +18,7 @@ class FragmentStart : FragmentParent() {
         super.onShow()
         val view = this.view
         if (view != null) {
-            //(activity?.application as SOApplication).sensorContainer.setViewContainer(view.findViewById(R.id.container))
+            (activity?.application as SOApplication).sensorContainer.setViewContainer(view.findViewById(R.id.container))
         }
     }
 
