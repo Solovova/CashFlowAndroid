@@ -5,19 +5,22 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import android.widget.Button
 import android.widget.TextView
 import com.solovova.cashflow.R
-import com.solovova.cashflow.dataclass.Account
+import com.solovova.cashflow.data.Account
 
 //All good
-class SensorButton(context: Context) : ConstraintLayout(context) {
+class AccountButton(context: Context) : ConstraintLayout(context) {
     private var mTextMain: TextView
+    private var mTextBalance: TextView
+
     private var mButtonMain: Button
     private var mButtonDel: Button
 
     private var account: Account? = null
 
     init {
-        inflate(context, R.layout.soview_sensor_button, this)
+        inflate(context, R.layout.soview_account_button, this)
         this.mTextMain = findViewById(R.id.textMain)
+        this.mTextBalance = findViewById(R.id.textBalance)
         this.mButtonMain = findViewById(R.id.button)
         this.mButtonDel = findViewById(R.id.buttonDel)
 
@@ -26,7 +29,7 @@ class SensorButton(context: Context) : ConstraintLayout(context) {
 //        val onClickListenerDel = OnClickListener {
 //            val sensor = this.sensor
 //            if (sensor != null) {
-//                sensor.sensorContainer.deleteSensor(sensor)
+//                sensor.data.deleteSensor(sensor)
 //                (context as MainActivity).showStartScreen()
 //            }
 //            return@OnClickListener
@@ -43,7 +46,7 @@ class SensorButton(context: Context) : ConstraintLayout(context) {
     fun refreshValue() {
         val account = this.account
         if (account != null) {
-
+            mTextBalance.text = account.balance.toString()
         }
     }
 

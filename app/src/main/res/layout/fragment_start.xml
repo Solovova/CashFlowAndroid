@@ -23,7 +23,7 @@
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0dp"
 
-                android:text="Devices"
+                android:text="Accounts"
                 android:textColor="@color/colorSOBlack"
 
                 android:textSize="30sp"
@@ -81,7 +81,6 @@
                     android:typeface="normal"
                     android:textStyle="bold"
                     android:fontFamily="@font/proximanova"
-                    android:onClick="startFragmentScan"
                     android:textColor="@color/colorSOBlack"
                     style="?android:attr/buttonBarButtonStyle"
             />
@@ -95,7 +94,6 @@
                     android:typeface="normal"
                     android:textStyle="bold"
                     android:fontFamily="@font/proximanova"
-                    android:onClick="startFragmentScan"
                     app:layout_constraintStart_toEndOf="@+id/buttonAdd"
                     style="?android:attr/buttonBarButtonStyle"
             />

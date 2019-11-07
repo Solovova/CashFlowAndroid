@@ -2,8 +2,7 @@ package com.solovova.cashflow.data
 
 import android.widget.LinearLayout
 import com.solovova.cashflow.SOApplication
-import com.solovova.cashflow.dataclass.Account
-import com.solovova.cashflow.soviews.SensorButton
+import com.solovova.cashflow.soviews.AccountButton
 
 class Data(app: SOApplication) {
     val accounts = mutableListOf<Account>()
@@ -31,7 +30,7 @@ class Data(app: SOApplication) {
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
                 )
-                val newButton = SensorButton(viewContainer.context)
+                val newButton = AccountButton(viewContainer.context)
                 params.setMargins(0, 0, 0, 0)
                 newButton.layoutParams = params
                 viewContainer.addView(newButton)
